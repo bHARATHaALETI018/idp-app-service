@@ -1,0 +1,17 @@
+resources:
+  - ../../../base
+
+namePrefix: hello-
+
+images:
+  - name: nginx
+    newName: nginx
+    newTag: 1.25-alpine
+
+patches:
+  - target:
+      kind: Ingress
+    patch: |-
+      - op: replace
+        path: /spec/rules/0/host
+        value: hello.dev.local
