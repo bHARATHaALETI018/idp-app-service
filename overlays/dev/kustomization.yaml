@@ -19,3 +19,31 @@ patches:
       - op: replace
         path: /spec/rules/0/host
         value: hello.dev.local
+
+  - target:
+      kind: ConfigMap
+      name: nginx-html-content
+    patch: |-
+      - op: replace
+        path: /data/index.html
+        value: |
+          <!DOCTYPE html>
+          <html lang="en">
+          <head>
+              <meta charset="UTF-8">
+              <meta name="viewport" content="width=device-width, initial-scale=1.0">
+              <title>Custom Nginx Page - DEV</title>
+          </head>
+          <body bgcolor="red">
+            <div style="display:flex; flex-direction:column; justify-content:center; align-items:center; height:100vh;">
+              <h1>🛠️ DEV Environment 🛠️</h1>
+              <p>This page is served from <b>DEV</b> Kubernetes environment.</p>
+              <p>Current Time: <span id="current-time"></span></p>
+            </div>
+            <script>
+              document.getElementById("current-time").textContent = new Date().toLocaleString();
+            </script>
+          </body>
+          </html>
+      
+      

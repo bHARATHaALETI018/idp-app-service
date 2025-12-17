@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-html-content
+data:
+  index.html: |
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Custom Nginx Page</title>
+    </head>
+    <body>
+      
+      <div style="display:flex; justify-content:center; align-items:center;">
+        <h1>Welcome to the Custom Nginx Page!</h1>
+        <p>This page is being served by Nginx in Kubernetes.</p>
+        <p>Current Time: <span id="current-time"></span></p>
+      </div>
+        <script>
+            document.getElementById("current-time").textContent = new Date().toLocaleString();
+        </script>
+    </body>
+    </html>
