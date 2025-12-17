@@ -8,7 +8,7 @@ namePrefix: dev-
 images:
   - name: nginx:alpine
     newName: nginx
-    newTag: 1.25-alpine
+    newTag: does-not-exist
 
 patches:
   - target:
