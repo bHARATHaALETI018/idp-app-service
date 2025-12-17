@@ -4,9 +4,10 @@ resources:
 namePrefix: hello-
 
 images:
-  - name: nginx
+  - name: nginx:alpine
     newName: nginx
     newTag: 1.25-alpine
+    
 
 patches:
   - target:
