@@ -15,17 +15,10 @@ spec:
       initContainers:
         - name: copy-html
           image: busybox
-          command: ['sh', '-c', 'echo "<html>
-                            <head>
-                              <title>My Custom NGINX Page</title>
-                            </head>
-                            <body style="display:flex;justify-content:center;align-items:center;"> 
-                              <h1>Welcome to My Custom NGINX Page!</h1>
-                              <p>This page is from the pods in testing namespace</p>
-                            </body>
-                          </html>
-
-                          " > /tmp/index.html']
+          command:
+            - sh
+            - -c
+            - echo '<html> <head> <title>My Custom NGINX Page</title> </head> <body style="display:flex;justify-content:center;align-items:center;"> <h1>Welcome to My Custom NGINX Page!</h1> <p>This page is from the pods in testing namespace</p> </body> </html>' > /tmp/index.html
           volumeMounts:
             - name: html-volume
               mountPath: /tmp
