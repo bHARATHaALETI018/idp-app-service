@@ -34,7 +34,7 @@ patches:
               <meta name="viewport" content="width=device-width, initial-scale=1.0">
               <title>Custom Nginx Page - DEV</title>
           </head>
-          <body bgcolor="red">
+          <body style="background-color:#ffecec;">
             <div style="display:flex; flex-direction:column; justify-content:center; align-items:center; height:100vh;">
               <h1>🛠️ DEV Environment 🛠️</h1>
               <p>This page is served from <b>DEV</b> Kubernetes environment.</p>
