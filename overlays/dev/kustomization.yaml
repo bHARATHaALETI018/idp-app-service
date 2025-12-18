@@ -13,7 +13,7 @@ replicas:
 images:
   - name: nginx:alpine
     newName: nginx
-    newTag: 1.25:alpine
+    newTag: 1.25-alpine
 
 patches:
   - target:
