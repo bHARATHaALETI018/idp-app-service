@@ -6,6 +6,10 @@ resources:
   - ../../base
 nameSuffix: -dev
 
+replicas:
+  - name: app
+    count: 20
+
 images:
   - name: nginx:alpine
     newName: nginx
