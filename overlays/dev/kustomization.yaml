@@ -8,7 +8,7 @@ nameSuffix: -dev
 
 replicas:
   - name: app
-    count: 20
+    count: 3
 
 images:
   - name: nginx:alpine
