@@ -31,3 +31,6 @@ Developers interact only with Git — no direct Kubernetes access required.
 - No manual kubectl or Helm commands
 - Rollbacks are done via Git revert
 
+---
+
+This is a sub-repo of the main one: [Internal-Developer-Platform](https://github.com/bHARATHaALETI018/internal-developer-platform.git)
